@@ -304,10 +304,10 @@ document.querySelectorAll('.wg-element-wrapper.sw3 [lang]').forEach((link)=>{
                   <div id="w-node-b6387bd7-79e0-eee1-7703-b2ba487b6e79-83d51567" class="input-wrapper"><label for="Message" class="field-label-5">Message</label><textarea placeholder="Hello there, I would like to talk about..." maxlength="5000" id="Message" name="message" data-name="Message" class="text-area w-input"></textarea></div><input type="submit" value="Send Message" data-wait="Please wait..." id="w-node-_0e3cef8f-0e72-6dec-ad4e-34acca70a24f-83d51567" class="button-primary w-button">
                 </div>
               </form>
-              <div class="success-message">
+              <div class="success-message" style="display: none;">
                 <div>Your message has been submitted. <br>We will get back to you within 24-48 hours.</div>
               </div>
-              <div class="error-message">
+              <div class="error-message" style="display: none;">
                 <div>Oops! Something went wrong.</div>
               </div>
             </div>
@@ -534,6 +534,17 @@ document.querySelectorAll('.wg-element-wrapper.sw3 [lang]').forEach((link)=>{
   <script src="js/carmen-ramirez-4c58c8.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
   <script>
+    // Initialize: Hide success and error messages on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      const formBlock = document.querySelector('.contact-form-block');
+      if (formBlock) {
+        const successMessage = formBlock.querySelector('.success-message');
+        const errorMessage = formBlock.querySelector('.error-message');
+        if (successMessage) successMessage.style.display = 'none';
+        if (errorMessage) errorMessage.style.display = 'none';
+      }
+    });
+    
     // Handle form submission for contact form with AJAX
     document.getElementById('wf-form-Contact-Form').addEventListener('submit', function(e) {
       e.preventDefault();
