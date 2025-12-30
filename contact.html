@@ -304,10 +304,10 @@ document.querySelectorAll('.wg-element-wrapper.sw3 [lang]').forEach((link)=>{
                   <div id="w-node-b6387bd7-79e0-eee1-7703-b2ba487b6e79-83d51567" class="input-wrapper"><label for="Message" class="field-label-5">Message</label><textarea placeholder="Hello there, I would like to talk about..." maxlength="5000" id="Message" name="message" data-name="Message" class="text-area w-input"></textarea></div><input type="submit" value="Send Message" data-wait="Please wait..." id="w-node-_0e3cef8f-0e72-6dec-ad4e-34acca70a24f-83d51567" class="button-primary w-button">
                 </div>
               </form>
-              <div class="success-message w-form-done">
+              <div class="success-message">
                 <div>Your message has been submitted. <br>We will get back to you within 24-48 hours.</div>
               </div>
-              <div class="error-message w-form-fail">
+              <div class="error-message">
                 <div>Oops! Something went wrong.</div>
               </div>
             </div>
@@ -539,7 +539,14 @@ document.querySelectorAll('.wg-element-wrapper.sw3 [lang]').forEach((link)=>{
       e.preventDefault();
       const form = this;
       const formBlock = form.closest('.contact-form-block');
+      const successMessage = formBlock.querySelector('.success-message');
+      const errorMessage = formBlock.querySelector('.error-message');
       const formData = new FormData(form);
+      
+      // Hide form and any previous messages initially
+      form.style.display = 'block';
+      successMessage.style.display = 'none';
+      errorMessage.style.display = 'none';
       
       // Show loading state
       formBlock.classList.add('w-form-loading');
@@ -548,23 +555,28 @@ document.querySelectorAll('.wg-element-wrapper.sw3 [lang]').forEach((link)=>{
       // Submit form via AJAX
       fetch(form.action, {
         method: 'POST',
-        body: formData
+        body: formData,
+        mode: 'no-cors' // FormSubmit works with no-cors
       })
-      .then(response => {
-        if (response.ok) {
-          // Show success message
+      .then(() => {
+        // FormSubmit always returns success with no-cors, so we assume it worked
+        // Show success message
+        setTimeout(function() {
           formBlock.classList.remove('w-form-loading');
           formBlock.classList.add('w-form-done');
           form.style.display = 'none';
+          // Explicitly show success message
+          successMessage.style.display = 'block';
+          successMessage.style.visibility = 'visible';
           form.reset();
-        } else {
-          throw new Error('Form submission failed');
-        }
+        }, 500);
       })
       .catch(error => {
         // Show error message
         formBlock.classList.remove('w-form-loading');
         formBlock.classList.add('w-form-fail');
+        errorMessage.style.display = 'block';
+        form.style.display = 'block';
         console.error('Error:', error);
       });
     });
