@@ -287,7 +287,133 @@ document.querySelectorAll('.wg-element-wrapper.sw3 [lang]').forEach((link)=>{
         <div class="text-block-5">Scroll Down</div>
       </a>
     </header>
-    <header id="hero" class="hero wf-section">
+    
+    <!-- =========================================================
+         2025 HERO UPGRADE (Legacy Planner)
+         Inserted by ChatGPT. Old hero commented out below.
+         ========================================================= -->
+    <section id="hero" class="cr-hero2025 wf-section" aria-label="Hero">
+      <div class="cr-hero2025__bg" aria-hidden="true">
+        <svg class="cr-hero2025__pattern" viewBox="0 0 800 600" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="crHeroGrad" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="currentColor" stop-opacity="0.10"/>
+              <stop offset="1" stop-color="currentColor" stop-opacity="0.02"/>
+            </linearGradient>
+            <pattern id="crTopo" width="120" height="120" patternUnits="userSpaceOnUse">
+              <path d="M10 30c30-20 60 20 100 0" fill="none" stroke="currentColor" stroke-opacity="0.12" stroke-width="1"/>
+              <path d="M0 70c30-20 60 20 120 0" fill="none" stroke="currentColor" stroke-opacity="0.08" stroke-width="1"/>
+              <path d="M20 100c20-15 40 10 80 0" fill="none" stroke="currentColor" stroke-opacity="0.10" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="800" height="600" fill="url(#crHeroGrad)"/>
+          <rect width="800" height="600" fill="url(#crTopo)"/>
+        </svg>
+        <div class="cr-hero2025__glow"></div>
+      </div>
+
+      <div class="container-default w-container cr-hero2025__container">
+        <div class="cr-hero2025__grid">
+          <!-- Left: Message -->
+          <div class="cr-hero2025__copy">
+            <p class="cr-hero2025__eyebrow">Trust &amp; Estate Attorney • Merced County</p>
+            <h1 class="cr-hero2025__title">Protect your family&apos;s future with <span class="cr-hero2025__accent">trusted estate planning</span>.</h1>
+            <p class="cr-hero2025__subhead">
+              Comprehensive trusts, wills, and probate guidance designed to safeguard your legacy and give you peace of mind—today and for generations to come.
+            </p>
+
+            <ul class="cr-hero2025__proof" aria-label="Trust markers">
+              <li class="cr-hero2025__proofItem"><span class="cr-hero2025__icon" aria-hidden="true">⚖️</span> <span><strong>TODO:</strong> Credential / bar admission</span></li>
+              <li class="cr-hero2025__proofItem"><span class="cr-hero2025__icon" aria-hidden="true">⏳</span> <span><strong>TODO:</strong> Years of experience</span></li>
+              <li class="cr-hero2025__proofItem"><span class="cr-hero2025__icon" aria-hidden="true">🌐</span> <span>English &amp; Spanish</span></li>
+              <li class="cr-hero2025__proofItem"><span class="cr-hero2025__icon" aria-hidden="true">📍</span> <span>Serving Merced County</span></li>
+            </ul>
+
+            <div class="cr-hero2025__ctaRow">
+              <a href="contact.html" class="button-primary w-button cr-hero2025__ctaPrimary">Schedule a Consultation</a>
+              <a href="practice-areas.html" class="button-secondary w-button cr-hero2025__ctaSecondary">See Practice Areas</a>
+            </div>
+            <p class="cr-hero2025__micro">Replies within 1 business day • <span class="cr-hero2025__disclaimer">Information on this site is not legal advice.</span></p>
+
+            <div class="cr-hero2025__trustedLine">Trusted by families and business owners across the Central Valley</div>
+
+            <a class="cr-hero2025__scroll" href="#home-practice-areas" aria-label="Scroll to practice areas">
+              <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+          <!-- Right: Interactive card + image -->
+          <div class="cr-hero2025__side">
+            <div class="cr-hero2025__card" data-legacy-planner>
+              <div class="cr-hero2025__cardHeader">
+                <h2 class="cr-hero2025__cardTitle">Legacy Planner</h2>
+                <p class="cr-hero2025__cardSub">Get a personalized recommendation</p>
+              </div>
+
+              <div class="cr-hero2025__chips" role="group" aria-label="Select your situation">
+                <button type="button" class="cr-chip" data-chip="home" aria-pressed="false">I own a home</button>
+                <button type="button" class="cr-chip" data-chip="children" aria-pressed="false">I have children</button>
+                <button type="button" class="cr-chip" data-chip="business" aria-pressed="false">I run a business</button>
+                <button type="button" class="cr-chip" data-chip="probate" aria-pressed="false">I want to avoid probate</button>
+              </div>
+
+              <div class="cr-hero2025__meter">
+                <div class="cr-hero2025__meterTop">
+                  <span class="cr-hero2025__meterLabel">Estimated planning focus</span>
+                  <span class="cr-hero2025__meterValue" data-meter-value>0%</span>
+                </div>
+                <div class="cr-hero2025__meterTrack" aria-hidden="true">
+                  <div class="cr-hero2025__meterBar" data-meter-bar style="width: 0%"></div>
+                </div>
+                <p class="cr-hero2025__recommendation" data-recommendation>
+                  Select your situation to see personalized recommendations.
+                </p>
+              </div>
+
+              <div class="cr-hero2025__cardActions">
+                <button type="button" class="button-primary w-button cr-hero2025__checklistBtn" data-modal-open>Get a Checklist</button>
+              </div>
+            </div>
+
+            <figure class="cr-hero2025__imageWrap">
+              <img class="cr-hero2025__image" src="images/hERO.jpg"
+                   srcset="images/hERO-p-500.jpeg 500w, images/hERO-p-800.jpeg 800w, images/hERO-p-1080.jpeg 1080w, images/hERO-p-1600.jpeg 1600w, images/hERO.jpg 1804w"
+                   sizes="(max-width: 991px) 92vw, 520px"
+                   alt="Carmen at the conference table">
+              <figcaption class="cr-hero2025__imgCaption">Estate planning tailored to your life—not a one-size-fits-all template.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="cr-modal" data-modal hidden>
+        <div class="cr-modal__overlay" data-modal-close tabindex="-1" aria-hidden="true"></div>
+        <div class="cr-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="crChecklistTitle">
+          <div class="cr-modal__header">
+            <h3 id="crChecklistTitle" class="cr-modal__title">Your Estate Planning Checklist</h3>
+            <button type="button" class="cr-modal__close" data-modal-close aria-label="Close dialog">×</button>
+          </div>
+          <div class="cr-modal__body">
+            <p class="cr-modal__intro">Here&apos;s a starter list based on what you selected. (<strong>TODO:</strong> customize copy.)</p>
+            <ul class="cr-modal__list" data-checklist>
+              <li>Gather key documents: deeds, insurance, account statements.</li>
+              <li>List beneficiaries and decision-makers (trustee, guardian, agent).</li>
+              <li>Identify major assets and any special wishes.</li>
+              <li>Schedule a consultation to confirm the best plan for your situation.</li>
+            </ul>
+            <div class="cr-modal__cta">
+              <a class="button-primary w-button" href="contact.html">Schedule a Consultation</a>
+              <a class="button-secondary w-button" href="practice-areas.html">Explore Services</a>
+            </div>
+            <p class="cr-modal__fineprint">Information on this site is not legal advice. Consult with a qualified attorney for guidance specific to your situation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- OLD HERO (commented out)
+<header id="hero" class="hero wf-section">
       <div class="flex-container w-container">
         <div data-w-id="89461188-3b14-cad4-0a2c-a70489ce8695" style="-webkit-transform:translate3d(-40px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-40px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-40px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-40px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="div-block">
           <h1 class="hero-heading">Merced <span class="accent-text">Trust and Estate</span> Attorney</h1>
@@ -300,6 +426,7 @@ document.querySelectorAll('.wg-element-wrapper.sw3 [lang]').forEach((link)=>{
         </div>
       </div>
     </header>
+END OLD HERO -->
     <section class="section home-hero wf-section">
       <div class="container-default w-container"><img src="images/hERO.jpg" srcset="images/hERO-p-500.jpeg 500w, images/hERO-p-800.jpeg 800w, images/hERO-p-1080.jpeg 1080w, images/hERO-p-1600.jpeg 1600w, images/hERO.jpg 1804w" sizes="100vw" alt="Carmen at the conference table" class="image home-hero">
         <div class="home-hero-wrapper">
